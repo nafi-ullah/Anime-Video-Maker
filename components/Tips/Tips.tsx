@@ -47,21 +47,7 @@ const Tip: React.FC<{
 export const Tips: React.FC = () => {
   return (
     <div className={styles.row}>
-      <Tip
-        href="https://www.remotion.dev/docs/the-fundamentals"
-        title="Learn Remotion"
-        description="Learn how to customize this video written in React."
-      ></Tip>
-      <Tip
-        href="https://github.com/remotion-dev/template-next-app-dir"
-        title="See source"
-        description="Visit the GitHub repository for this app."
-      ></Tip>
-      <Tip
-        href="https://remotion.dev/discord"
-        title="Join the community"
-        description="Chat with others builders on Discord."
-      ></Tip>
+      nice
     </div>
   );
 };

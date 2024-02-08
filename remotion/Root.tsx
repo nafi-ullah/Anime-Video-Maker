@@ -18,11 +18,11 @@ export const RemotionRoot: React.FC = () => {
         component={Main}
         durationInFrames={DURATION_IN_FRAMES}
         fps={VIDEO_FPS}
-        width={VIDEO_WIDTH}
-        height={VIDEO_HEIGHT}
+        width={540}
+        height={990}
         defaultProps={defaultMyCompProps}
       />
-      <Composition
+      {/* <Composition
         id="NextLogo"
         component={NextLogo}
         durationInFrames={300}
@@ -32,7 +32,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           outProgress: 0,
         }}
-      />
+      /> */}
     </>
   );
 };

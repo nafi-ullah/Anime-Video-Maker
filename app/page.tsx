@@ -18,9 +18,10 @@ import { Tips } from "../components/Tips/Tips";
 import { Spacing } from "../components/Spacing";
 
 const container: React.CSSProperties = {
-  maxWidth: 768,
+  maxWidth: 400,
   margin: "auto",
   marginBottom: 20,
+  
 };
 
 const outer: React.CSSProperties = {
@@ -29,6 +30,7 @@ const outer: React.CSSProperties = {
   boxShadow: "0 0 200px rgba(0, 0, 0, 0.15)",
   marginBottom: 40,
   marginTop: 60,
+  
 };
 
 const player: React.CSSProperties = {
@@ -53,24 +55,16 @@ const Home: NextPage = () => {
             inputProps={inputProps}
             durationInFrames={DURATION_IN_FRAMES}
             fps={VIDEO_FPS}
-            compositionHeight={VIDEO_HEIGHT}
-            compositionWidth={VIDEO_WIDTH}
+            compositionHeight={990}
+            compositionWidth={540}
             style={player}
             controls
             autoPlay
             loop
           />
         </div>
-        <RenderControls
-          text={text}
-          setText={setText}
-          inputProps={inputProps}
-        ></RenderControls>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Spacing></Spacing>
-        <Tips></Tips>
+        
+        
       </div>
     </div>
   );

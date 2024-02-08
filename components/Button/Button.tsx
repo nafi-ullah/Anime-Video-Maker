@@ -29,7 +29,7 @@ const ButtonForward: React.ForwardRefRenderFunction<
           <Spacing></Spacing>
         </>
       )}
-      {children}
+      My Bad
     </button>
   );
 };

@@ -47,15 +47,15 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
 
   return (
     <AbsoluteFill style={container}>
-      <Sequence durationInFrames={transitionStart + transitionDuration}>
+      {/* <Sequence durationInFrames={transitionStart + transitionDuration}>
         <Rings outProgress={logoOut}></Rings>
         <AbsoluteFill style={logo}>
           <NextLogo outProgress={logoOut}></NextLogo>
         </AbsoluteFill>
-      </Sequence>
+      </Sequence> */}
       <Sequence from={transitionStart + transitionDuration / 2}>
         <TextFade>
-          <h1 style={titleStyle}>{title}</h1>
+          <h1 style={titleStyle}>I am the boss</h1>
         </TextFade>
       </Sequence>
     </AbsoluteFill>

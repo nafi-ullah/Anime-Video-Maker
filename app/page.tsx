@@ -50,6 +50,7 @@ const Home: NextPage = () => {
     <div>
       <div style={container}>
         <div className="cinematics" style={outer}>
+          
           <Player
             component={Main}
             inputProps={inputProps}

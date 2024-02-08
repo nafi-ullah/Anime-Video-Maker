@@ -12,6 +12,8 @@ import { loadFont, fontFamily } from "@remotion/google-fonts/Inter";
 import React, { useMemo } from "react";
 import { Rings } from "./Rings";
 import { TextFade } from "./TextFade";
+import myImage from './assets/trialpic.jpg';
+
 
 loadFont();
 
@@ -54,9 +56,12 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
         </AbsoluteFill>
       </Sequence> */}
       <Sequence from={transitionStart + transitionDuration / 2}>
+      
         <TextFade>
           <h1 style={titleStyle}>I am the boss</h1>
+         
         </TextFade>
+        
       </Sequence>
     </AbsoluteFill>
   );

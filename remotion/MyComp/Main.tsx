@@ -58,7 +58,7 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
       <Sequence from={transitionStart + transitionDuration / 2}>
       
         <TextFade>
-          <h1 style={titleStyle}>I am the boss</h1>
+          <h1 style={titleStyle}>Define Coders</h1>
          
         </TextFade>
         

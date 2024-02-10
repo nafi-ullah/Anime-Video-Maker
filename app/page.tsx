@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image'
 import { Player } from "@remotion/player";
 import type { NextPage } from "next";
 import React, { useMemo, useState } from "react";
@@ -19,6 +20,7 @@ import { Spacing } from "../components/Spacing";
 
 import { Navbar } from "../components/Dashboard components/Navbar"; 
 import { InputBox } from "../components/Dashboard components/InputBox"; 
+import phoneframe  from "../components/Assets/phoneframe.png";
 
 const mainscreen: React.CSSProperties = {
   width: "100vw",
@@ -30,10 +32,7 @@ const mainscreen: React.CSSProperties = {
 
 const container: React.CSSProperties = {
   maxWidth: 400,
-  marginBottom: 20,
-
-  flex: 1,
-  minHeight: 0
+  
   
   
 };
@@ -83,16 +82,22 @@ const Home: NextPage = () => {
       </div>
       
       <div className="w-screen h-screen flex">
-        <div className="w-3/5 h-screen bg-slate-500 p-24 text-7xl font-bold">
+        <div className="w-3/5 h-scree p-24 text-7xl font-bold">
           AI Reels Generator
           <div>
             <InputBox></InputBox>
           </div>
         </div>
         
-        <div className="w-2/5 h-screen bg-red-500">
+        <div className="w-2/5 h-screen ">
 
-        <div style={container}>
+          
+        <div className='w-[460px] absolute z-10 mt-6'>
+          <Image src={phoneframe} alt="frame"/>
+          </div>
+          
+
+        <div className='w-[400px] m-8'>
         <div className="cinematics" style={outer}>
           
           <Player
@@ -111,6 +116,8 @@ const Home: NextPage = () => {
         
         
       </div> 
+
+      
 
         </div>
 

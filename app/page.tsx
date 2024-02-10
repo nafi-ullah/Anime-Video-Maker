@@ -17,6 +17,9 @@ import { RenderControls } from "../components/RenderControls";
 import { Tips } from "../components/Tips/Tips";
 import { Spacing } from "../components/Spacing";
 
+import { Navbar } from "../components/Dashboard components/Navbar"; 
+import { InputBox } from "../components/Dashboard components/InputBox"; 
+
 const mainscreen: React.CSSProperties = {
   width: "100vw",
   height: "100vh",
@@ -74,13 +77,22 @@ const Home: NextPage = () => {
   }, [text]);
 
   return (
-    <div style={mainscreen}>
-        <div className="w-[1200px] h-[800px] text-3xl font-bold underline inline-block">
-      Hello world!
-    </div>
-     
-         
-         <div style={container}>
+    <div className="w-screen h-screen">
+      <div>
+      <Navbar></Navbar>
+      </div>
+      
+      <div className="w-screen h-screen flex">
+        <div className="w-3/5 h-screen bg-slate-500 p-24 text-7xl font-bold">
+          AI Reels Generator
+          <div>
+            <InputBox></InputBox>
+          </div>
+        </div>
+        
+        <div className="w-2/5 h-screen bg-red-500">
+
+        <div style={container}>
         <div className="cinematics" style={outer}>
           
           <Player
@@ -98,7 +110,18 @@ const Home: NextPage = () => {
         </div>
         
         
-      </div>
+      </div> 
+
+        </div>
+
+        </div>
+      
+        {/* <div className="w-[1200px] h-[800px] text-3xl font-bold underline inline-block">
+      Hello world!
+    </div>
+     
+         
+       */}
       
     </div>
   );

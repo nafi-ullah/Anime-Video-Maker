@@ -17,16 +17,43 @@ import { RenderControls } from "../components/RenderControls";
 import { Tips } from "../components/Tips/Tips";
 import { Spacing } from "../components/Spacing";
 
+const mainscreen: React.CSSProperties = {
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "white",
+  display: "flex",
+ 
+};
+
 const container: React.CSSProperties = {
   maxWidth: 400,
-  margin: "auto",
   marginBottom: 20,
+
+  flex: 1,
+  minHeight: 0
+  
   
 };
 
+const leftcontainer: React.CSSProperties = {
+  width: "60%",
+  height: "300px",
+  display: "inline-block",
+  
+  
+};
+
+const containerbox: React.CSSProperties = {
+  width: "600",
+};
+
+
+
+
+
+
 const outer: React.CSSProperties = {
   borderRadius: "var(--geist-border-radius)",
-  overflow: "hidden",
   boxShadow: "0 0 200px rgba(0, 0, 0, 0.15)",
   marginBottom: 40,
   marginTop: 60,
@@ -47,8 +74,13 @@ const Home: NextPage = () => {
   }, [text]);
 
   return (
-    <div>
-      <div style={container}>
+    <div style={mainscreen}>
+        <div className="w-[1200px] h-[800px] text-3xl font-bold underline inline-block">
+      Hello world!
+    </div>
+     
+         
+         <div style={container}>
         <div className="cinematics" style={outer}>
           
           <Player
@@ -67,6 +99,7 @@ const Home: NextPage = () => {
         
         
       </div>
+      
     </div>
   );
 };

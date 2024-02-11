@@ -5,6 +5,7 @@ import { Player } from "@remotion/player";
 import type { NextPage } from "next";
 import React, { useMemo, useState } from "react";
 import { Main } from "../remotion/MyComp/Main";
+import { Scene3 } from "../remotion/MyComp/Scene3";
 import {
   CompositionProps,
   defaultMyCompProps,
@@ -101,7 +102,7 @@ const Home: NextPage = () => {
         <div className="cinematics" style={outer}>
           
           <Player
-            component={Main}
+            component={Scene3}
             inputProps={inputProps}
             durationInFrames={DURATION_IN_FRAMES}
             fps={VIDEO_FPS}

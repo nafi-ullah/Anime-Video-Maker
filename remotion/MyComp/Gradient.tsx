@@ -1,9 +1,11 @@
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const Gradient: React.FC = () => {
+export const Gradient: React.FC<{
+  height: number
+}> = ({height}) => {
 
   const frame = useCurrentFrame(); // get current frame
-  const {height} = useVideoConfig(); // get height of the composition
+  //const {height} = useVideoConfig(); // get height of the composition
   const duration = 4 * 30; // 4 sec to spent through the whole gradient
   const offset = height * 2 * (frame/duration);
 

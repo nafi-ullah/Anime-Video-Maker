@@ -11,6 +11,7 @@ import {
 import { NextLogo } from "./MyComp/NextLogo";
 
 import { Gradient } from "./MyComp/Gradient"; 
+import { Scene3 } from "./MyComp/Scene3";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -18,6 +19,15 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Gradient"
         component={Gradient}
+        width={720}
+        height={1280}
+        durationInFrames={120}
+        fps={30}
+      
+      />
+       <Composition
+        id="Scene3"
+        component={Scene3}
         width={720}
         height={1280}
         durationInFrames={120}

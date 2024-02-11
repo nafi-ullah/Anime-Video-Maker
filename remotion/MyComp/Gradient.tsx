@@ -21,7 +21,7 @@ export const Gradient: React.FC<{
     <AbsoluteFill style={{
         
         height: height * 1.5, // normal height er ektu beshi height jeno ektu pore seta normal a transform hoy, etai animation
-        top: height * 1.5 -1, // -1 cz ek frame theke arek frame a jaite ekta daag pore gese
+        top: height * 1.5 -1, // -1 cz ek frame theke arek frame a jaite ekta daag pore gese // left , top, right egula hocche margin
         background: 'linear-gradient(to bottom, #92a77d, #ccd56a, #e6b417, #e37e10, #dc2407, #470905, #090416, #2f0199, #736bdb, #adc1d3, #aecdbf, #92a77d)',
         transform: `translateY(-${offset}px)`,
       }}/>

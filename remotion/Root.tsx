@@ -10,10 +10,24 @@ import {
 } from "../types/constants";
 import { NextLogo } from "./MyComp/NextLogo";
 
+import { Gradient } from "./MyComp/Gradient"; 
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
+        id="Gradient"
+        component={Gradient}
+        width={720}
+        height={1280}
+        durationInFrames={60}
+        fps={30}
+      
+      />
+
+     
+
+      {/* <Composition
         id={COMP_NAME}
         component={Main}
         durationInFrames={DURATION_IN_FRAMES}
@@ -21,7 +35,7 @@ export const RemotionRoot: React.FC = () => {
         width={540}
         height={990}
         defaultProps={defaultMyCompProps}
-      />
+      /> */}
       {/* <Composition
         id="NextLogo"
         component={NextLogo}

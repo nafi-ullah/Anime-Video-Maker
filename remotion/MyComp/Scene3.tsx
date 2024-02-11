@@ -33,6 +33,11 @@ export const Scene3: React.FC = () => {
                               // return(
                               //   <div style = {{opacity}}></div>
                               // );
+
+        // ekhon ami chacchi photo tao animate hok
+        const coverOpacity = interpolate(progress, [0.5,1], [0,1]);
+        const coverScale = interpolate(progress, [0.6,1],[0.7,1])
+
   return (
     <AbsoluteFill
       style= {{
@@ -55,7 +60,10 @@ export const Scene3: React.FC = () => {
           style={{
             left: width /2 - CIRCLE_SIZE /2 ,      // made the circle center in row
             top: height / 2 - CIRCLE_SIZE /2 + 150,  // made the circle center in colomn
-            position: 'absolute'
+            position: 'absolute',
+            opacity: coverOpacity,
+            transform: `scale(${coverScale})`
+
           }}
         >
 

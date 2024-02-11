@@ -3,6 +3,9 @@ import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 export const Gradient: React.FC<{
   height: number
 }> = ({height}) => {
+  if(!height){
+    height = 500;
+  }
 
   const frame = useCurrentFrame(); // get current frame
   //const {height} = useVideoConfig(); // get height of the composition

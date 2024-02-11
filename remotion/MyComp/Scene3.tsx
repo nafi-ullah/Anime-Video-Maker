@@ -1,6 +1,8 @@
 import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 import styled from 'styled-components';
 import { Gradient } from './Gradient';
+import { Album } from './Album';
+
 
 const CIRCLE_SIZE = 500;
 
@@ -19,7 +21,10 @@ export const Scene3: React.FC = () => {
       const { width, height, fps } = useVideoConfig();
       const progress = spring({
             frame,
-            fps
+            fps,
+            config:{
+              damping: 200, //  bounce ta bondho kore dibe
+            }
       });
 
       const scale = interpolate(progress, [0,1], [4,1]); // boro chhoto howar animation // to calculate the states between [0,1] and [4,1] of framing
@@ -46,7 +51,20 @@ export const Scene3: React.FC = () => {
       >
         <Gradient height={CIRCLE_SIZE}/>
       </Circle>
-     
+        <div
+          style={{
+            left: width /2 - CIRCLE_SIZE /2 ,      // made the circle center in row
+            top: height / 2 - CIRCLE_SIZE /2 + 150,  // made the circle center in colomn
+            position: 'absolute'
+          }}
+        >
+
+        <Album />
+        </div>
+
+          
+      
+       
       </AbsoluteFill>
   );
 };

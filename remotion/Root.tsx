@@ -20,7 +20,7 @@ export const RemotionRoot: React.FC = () => {
         component={Gradient}
         width={720}
         height={1280}
-        durationInFrames={60}
+        durationInFrames={120}
         fps={30}
       
       />

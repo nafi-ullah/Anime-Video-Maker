@@ -1,14 +1,5 @@
 import { Composition } from "remotion";
-import { Main } from "./MyComp/Main";
-import {
-  COMP_NAME,
-  defaultMyCompProps,
-  DURATION_IN_FRAMES,
-  VIDEO_FPS,
-  VIDEO_HEIGHT,
-  VIDEO_WIDTH,
-} from "../types/constants";
-import { NextLogo } from "./MyComp/NextLogo";
+
 
 import { Gradient } from "./MyComp/Gradient"; 
 import { Scene3 } from "./MyComp/Scene3";
@@ -16,7 +7,7 @@ import { Scene2 } from "./MyComp/Scene2";
 import { Merge } from "./MyComp/Merge";
 import { Story1 } from "./MyComp/Story1";
 import { MergeStory } from "./MyComp/MergeStory";
-import { AudioListen } from "./MyComp/AudioListen";
+
 
 export const RemotionRoot: React.FC = () => {
   return (

@@ -3,52 +3,45 @@
 import Image from 'next/image'
 import { Player } from "@remotion/player";
 import type { NextPage } from "next";
-import React, { useMemo, useState } from "react";
-import { Main } from "../remotion/MyComp/Main";
+//import React, { useMemo, useState } from "react";
 import { Scene3 } from "../remotion/MyComp/Scene3";
-import {
-  CompositionProps,
-  defaultMyCompProps,
-  DURATION_IN_FRAMES,
-  VIDEO_FPS,
-  VIDEO_HEIGHT,
-  VIDEO_WIDTH,
-} from "../types/constants";
-import { z } from "zod";
-import { RenderControls } from "../components/RenderControls";
-import { Tips } from "../components/Tips/Tips";
-import { Spacing } from "../components/Spacing";
+// import {
+//   CompositionProps,
+//   defaultMyCompProps,
+ 
+// } from "../types/constants";
+// import { z } from "zod";
+
 
 import { Navbar } from "../components/Dashboard components/Navbar"; 
 import { InputBox } from "../components/Dashboard components/InputBox"; 
 import phoneframe  from "../components/Assets/phoneframe.png";
+import { MergeStory } from '../remotion/MyComp/MergeStory';
 
-const mainscreen: React.CSSProperties = {
-  width: "100vw",
-  height: "100vh",
-  backgroundColor: "white",
-  display: "flex",
+// const mainscreen: React.CSSProperties = {
+//   width: "100vw",
+//   height: "100vh",
+//   backgroundColor: "white",
+//   display: "flex",
  
-};
+// };
 
-const container: React.CSSProperties = {
-  maxWidth: 400,
+// const container: React.CSSProperties = {
+//   maxWidth: 400,
   
-  
-  
-};
+// };
 
-const leftcontainer: React.CSSProperties = {
-  width: "60%",
-  height: "300px",
-  display: "inline-block",
+// const leftcontainer: React.CSSProperties = {
+//   width: "60%",
+//   height: "300px",
+//   display: "inline-block",
   
   
-};
+// };
 
-const containerbox: React.CSSProperties = {
-  width: "600",
-};
+// const containerbox: React.CSSProperties = {
+//   width: "600",
+// };
 
 
 
@@ -68,13 +61,13 @@ const player: React.CSSProperties = {
 };
 
 const Home: NextPage = () => {
-  const [text, setText] = useState<string>(defaultMyCompProps.title);
+  // const [text, setText] = useState<string>(defaultMyCompProps.title);
 
-  const inputProps: z.infer<typeof CompositionProps> = useMemo(() => {
-    return {
-      title: text,
-    };
-  }, [text]);
+  // const inputProps: z.infer<typeof CompositionProps> = useMemo(() => {
+  //   return {
+  //     title: text,
+  //   };
+  // }, [text]);
 
   return (
     <div className="w-screen h-screen">
@@ -102,11 +95,8 @@ const Home: NextPage = () => {
         <div className="cinematics" style={outer}>
           
           <Player
-            component={Scene3}
-            inputProps={{
-              projectName: 'Remotion AI'
-            }}
-            durationInFrames={120}
+            component={MergeStory}
+            durationInFrames={1050}
             fps={30}
             compositionHeight={1280}
             compositionWidth={720}
@@ -116,6 +106,7 @@ const Home: NextPage = () => {
             loop
            
           />
+      
         </div>
         
         

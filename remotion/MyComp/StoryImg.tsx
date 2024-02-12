@@ -17,6 +17,6 @@ export const StoryImg: React.FC<{
 }> = ({imgsrc}) => {
 
 
-  return <img src={imgsrc} style={{height: COVER_SIZE }}/>;
+  return <Img src={imgsrc} style={{height: 1280, width: 1280}}/>;
   //return <Img src={"hackpic.jpeg"} style={{width: COVER_SIZE }}/>; // enable for show image in dev
 };

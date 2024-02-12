@@ -11,6 +11,7 @@ import story6 from './assets/story6.jpeg';
 import story7 from './assets/story7.jpeg';
 
 export const storyImages = [story1, story2, story3, story4, story5, story6, story7];
+//export const storyImages = ["story1.jpeg", "story2.jpeg", "story3.jpeg", "story4.jpeg", "story5.jpeg", "story6.jpeg", "story7.jpeg"];
 
 export const storySentences: string[] = [
   "A BAT who fell upon the ground and was caught by a Weasel pleaded to be spared his life.",
@@ -22,6 +23,8 @@ export const storySentences: string[] = [
   "but a bat, and thus a second time escaped."
 ];
 
+export const duration = [0, 150, 300, 450, 600, 750, 900];
+
 
 export const MergeStory: React.FC<{
  
@@ -30,9 +33,16 @@ export const MergeStory: React.FC<{
 
   return (
     <>
+    {storyImages.map((imgUrl, index) => (
+
+      <Sequence from={duration[index]} durationInFrames={150}>
+        <Story2 imgUrl={imgUrl} sentence={storySentences[index]} />
+
+        </Sequence>
+      ))}
     
 
-    <Sequence from={0} durationInFrames={150}>
+    {/* <Sequence from={0} durationInFrames={150}>
       <Story2 imgUrl={storyImages[0]} sentence={storySentences[0]}/>
     </Sequence>
     <Sequence from={150} durationInFrames={150}>
@@ -52,7 +62,7 @@ export const MergeStory: React.FC<{
     </Sequence>
     <Sequence from={900} durationInFrames={150}>
     <Story2 imgUrl={storyImages[6]} sentence={storySentences[6]}/>
-    </Sequence>
+    </Sequence> */}
     
     <Sequence from={0} durationInFrames={1050}>
        <AudioListen></AudioListen>

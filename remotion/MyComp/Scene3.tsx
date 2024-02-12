@@ -38,16 +38,17 @@ const Title = styled.div`
 
 export const Scene3: React.FC = () => {
   const frame = useCurrentFrame();
+  console.log(frame);
   const { width, height, fps } = useVideoConfig();
   const progress = spring({
     frame,
-    fps,
+    fps: fps, //+ 220; For how many frames per second the spring animation should be calculated.  fps means koto
     config: {
-      damping: 200, //  bounce ta bondho kore dibe
+      damping: 50, //  bounce ta bondho kore dibe
     },
   });
 
-  const scale = interpolate(progress, [0, 1], [4, 1]); // boro chhoto howar animation // to calculate the states between [0,1] and [4,1] of framing
+  const scale = interpolate(progress, [0, 1], [3, 1]); // boro chhoto howar animation // to calculate the states between [0,1] and [4,1] of framing
   //(value that drives the annimation == frame ==current time, [0,50] == duration , [0,1] == opacity)
   // const opacity = interpolate(,,,,)
   // return(
@@ -63,7 +64,7 @@ export const Scene3: React.FC = () => {
 
   const upAnimation = spring({
     frame: frame - UPSTART, // kotokkhon por animation start hobe // frame 60 er time a ei animation start hobe
-    fps,
+    fps: fps + 50,
     config: {
       damping: 200,
     },

@@ -7,9 +7,7 @@ import {
 } from "remotion";
 import styled from "styled-components";
 import { StoryImg } from "./StoryImg"; 
-import story1 from './assets/story1.jpeg';
 
-const imageUrl = './assets/story1.jpeg';
 
 
 
@@ -30,13 +28,13 @@ const Title = styled.div`
   padding-right: 50px;
 `;
 
-export const Story1: React.FC<{
-  
-}> = () => {
+export const Story2: React.FC<{
+  imgUrl : string;
+}> = ({imgUrl}) => {
   const frame = useCurrentFrame();
   const { width, height, fps, durationInFrames } = useVideoConfig();
   const progress = spring({
-    frame: frame + 2,
+    frame: frame,
     fps,
     config: {
       //damping: 200, //  bounce ta bondho kore dibe
@@ -44,7 +42,7 @@ export const Story1: React.FC<{
     },
   });
   const progress2 = spring({
-    frame: frame - 140,
+    frame: frame - 145,
     fps,
     config: {
       //damping: 200, //  bounce ta bondho kore dibe
@@ -52,32 +50,10 @@ export const Story1: React.FC<{
     },
   });
 
-  const scale = interpolate(progress, [0, 1], [4, 1]); // boro chhoto howar animation // to calculate the states between [0,1] and [4,1] of framing
-  //(value that drives the annimation == frame ==current time, [0,50] == duration , [0,1] == opacity)
-  // const opacity = interpolate(,,,,)
-  // return(
-  //   <div style = {{opacity}}></div>
-  // );
 
-  // ekhon ami chacchi photo tao animate hok
-  const coverOpacity = interpolate(progress, [0.5, 1], [0, 1]);
   const coverScale = interpolate(progress, [0, 1], [1, 1.1]);
   const coverScaleOut = interpolate(progress2, [0, 1], [1.1, 2]);
-
-  //show korar por upore chole jabe:
-  const UPSTART = 60;
-
-  const upAnimation = spring({
-    frame: frame - UPSTART, // kotokkhon por animation start hobe // frame 60 er time a ei animation start hobe
-    fps,
-    // config: {
-    //   damping: 200,
-    // },
-  });
-  const contentTranslation = interpolate(upAnimation, [0, 1], [0, -100]);
-
-
-
+ 
   return (
     <AbsoluteFill
       style={{
@@ -93,7 +69,7 @@ export const Story1: React.FC<{
     transform: `scale(${coverScale}) scale(${coverScaleOut}) `,
   }}
 >
-  
+    <StoryImg imgsrc={imgUrl}/>
   
 </div>
 

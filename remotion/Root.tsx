@@ -15,6 +15,7 @@ import { Scene3 } from "./MyComp/Scene3";
 import { Scene2 } from "./MyComp/Scene2"; 
 import { Merge } from "./MyComp/Merge";
 import { Story1 } from "./MyComp/Story1";
+import { MergeStory } from "./MyComp/MergeStory";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -76,10 +77,18 @@ export const RemotionRoot: React.FC = () => {
         height={1280}
         durationInFrames={150}
         fps={30}
+      />
+      
+      <Composition
+        id="MergeStory"
+        component={MergeStory}
+        width={720}
+        height={1280}
+        durationInFrames={300}
+        fps={30}
        
       
       />
-      
 
      
 

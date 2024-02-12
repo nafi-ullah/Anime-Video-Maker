@@ -36,8 +36,9 @@ line-height: normal;
 `;
 
 export const Story2: React.FC<{
-  imgUrl : string;
-}> = ({imgUrl}) => {
+  imgUrl : string
+  sentence: string
+}> = ({imgUrl, sentence}) => {
   const frame = useCurrentFrame();
   const { width, height, fps, durationInFrames } = useVideoConfig();
   const progress = spring({
@@ -89,7 +90,7 @@ export const Story2: React.FC<{
 </div>
 
 <Title style={{opacity: TextOpacity}}>
-					If you want to win  <br /> you can do it all
+          {sentence}
 				</Title>
 
 

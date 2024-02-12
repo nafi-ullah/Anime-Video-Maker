@@ -85,7 +85,7 @@ export const RemotionRoot: React.FC = () => {
         component={MergeStory}
         width={720}
         height={1280}
-        durationInFrames={300}
+        durationInFrames={1050}
         fps={30}
        
       

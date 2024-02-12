@@ -40,7 +40,7 @@ export const Scene3: React.FC<{
   projectName : string
 }> = ({projectName}) => {
   const frame = useCurrentFrame();
-  const { width, height, fps } = useVideoConfig();
+  const { width, height, fps, durationInFrames } = useVideoConfig();
   const progress = spring({
     frame,
     fps,

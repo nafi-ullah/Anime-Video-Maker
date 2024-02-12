@@ -12,6 +12,7 @@ import { NextLogo } from "./MyComp/NextLogo";
 
 import { Gradient } from "./MyComp/Gradient"; 
 import { Scene3 } from "./MyComp/Scene3";
+import { Scene2 } from "./MyComp/Scene2"; 
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -26,6 +27,23 @@ export const RemotionRoot: React.FC = () => {
        
       
       />
+      <Composition
+				id="Scene2"
+				component={Scene2}
+				width={720}
+				height={1280}
+				durationInFrames={210}
+				fps={30}
+				defaultProps={{
+					ranking: [
+						'Rap',
+						'Pop',
+						'Underground\nHip Hop',
+						'Alternative R&B',
+						'Neo Soul',
+					] as [string, string, string, string, string],
+				}}
+			/>
        <Composition
         id="Scene3"
         component={Scene3}

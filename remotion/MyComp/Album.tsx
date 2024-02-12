@@ -18,5 +18,5 @@ export const Album: React.FC<{
 
 
   return <img src={hackpic} style={{width: COVER_SIZE }}/>;
-  //return <Img src={"hackpic.jpeg"} style={{width: COVER_SIZE }}/>;
+  //return <Img src={"hackpic.jpeg"} style={{width: COVER_SIZE }}/>; // enable for show image in dev
 };

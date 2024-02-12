@@ -36,19 +36,20 @@ const Title = styled.div`
   padding-right: 50px;
 `;
 
-export const Scene3: React.FC = () => {
+export const Scene3: React.FC<{
+  projectName : string
+}> = ({projectName}) => {
   const frame = useCurrentFrame();
-  console.log(frame);
   const { width, height, fps } = useVideoConfig();
   const progress = spring({
     frame,
-    fps: fps, //+ 220; For how many frames per second the spring animation should be calculated.  fps means koto
+    fps,
     config: {
-      damping: 50, //  bounce ta bondho kore dibe
+      damping: 200, //  bounce ta bondho kore dibe
     },
   });
 
-  const scale = interpolate(progress, [0, 1], [3, 1]); // boro chhoto howar animation // to calculate the states between [0,1] and [4,1] of framing
+  const scale = interpolate(progress, [0, 1], [4, 1]); // boro chhoto howar animation // to calculate the states between [0,1] and [4,1] of framing
   //(value that drives the annimation == frame ==current time, [0,50] == duration , [0,1] == opacity)
   // const opacity = interpolate(,,,,)
   // return(
@@ -64,7 +65,7 @@ export const Scene3: React.FC = () => {
 
   const upAnimation = spring({
     frame: frame - UPSTART, // kotokkhon por animation start hobe // frame 60 er time a ei animation start hobe
-    fps: fps + 50,
+    fps,
     config: {
       damping: 200,
     },
@@ -85,12 +86,12 @@ export const Scene3: React.FC = () => {
 		frame: frame - UPSTART - 15,
 		fps,
 		config: {
-			mass: 0.45,
+			mass: 0.45,  // faster korte chaile mass decrease korte hoy, r slower korte mass baraite hobe
 		},
 	});
 
 	const artistTextopacity = spring({
-		frame: frame - UPSTART - 43,
+		frame: frame - UPSTART - 43, // joto komabe toto pore animation ta start hobe. mane omuk no frame a suru hobe, eta initial value
 		fps,
 		config: {
 			mass: 0.45,
@@ -118,7 +119,7 @@ export const Scene3: React.FC = () => {
 						opacity: bottomTextOpacity,
 					}}
 				>
-					Your top project of the year is Remotion video maker.
+					Your top project of the year is {projectName}.
 				</Title>
 
 {/* Circle animation lagbe mathay rekeh design korte hobe, chhoto theke boro hoy circle */}
@@ -142,7 +143,8 @@ export const Scene3: React.FC = () => {
     transform: `scale(${coverScale})`,
   }}
 >
-  <Album />
+<Album />
+  
 </div>
 
 

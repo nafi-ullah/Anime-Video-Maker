@@ -103,15 +103,18 @@ const Home: NextPage = () => {
           
           <Player
             component={Scene3}
-            inputProps={inputProps}
-            durationInFrames={DURATION_IN_FRAMES}
-            fps={VIDEO_FPS}
-            compositionHeight={990}
-            compositionWidth={540}
+            inputProps={{
+              projectName: 'Remotion AI'
+            }}
+            durationInFrames={120}
+            fps={30}
+            compositionHeight={1280}
+            compositionWidth={720}
             style={player}
             controls
             autoPlay
             loop
+           
           />
         </div>
         

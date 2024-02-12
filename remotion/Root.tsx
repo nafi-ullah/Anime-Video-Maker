@@ -33,6 +33,10 @@ export const RemotionRoot: React.FC = () => {
         height={1280}
         durationInFrames={120}
         fps={30}
+        defaultProps={{
+            projectName: "Remotion AI"
+        }
+        }
       
       />
 

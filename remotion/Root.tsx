@@ -16,6 +16,7 @@ import { Scene2 } from "./MyComp/Scene2";
 import { Merge } from "./MyComp/Merge";
 import { Story1 } from "./MyComp/Story1";
 import { MergeStory } from "./MyComp/MergeStory";
+import { AudioListen } from "./MyComp/AudioListen";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -89,6 +90,7 @@ export const RemotionRoot: React.FC = () => {
        
       
       />
+     
 
      
 

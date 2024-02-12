@@ -75,7 +75,13 @@ export const Story1: React.FC<{
     // },
   });
   const contentTranslation = interpolate(upAnimation, [0, 1], [0, -100]);
-
+  const TextOpacity = spring({
+		frame: frame - 20,
+		fps,
+		config: {
+			mass: 0.45,  // faster korte chaile mass decrease korte hoy, r slower korte mass baraite hobe
+		},
+	});
 
 
   return (
@@ -84,6 +90,7 @@ export const Story1: React.FC<{
         backgroundColor: "#f4ecd0",
       }}
     >
+
 
 <div
   style={{
@@ -96,6 +103,9 @@ export const Story1: React.FC<{
   
   
 </div>
+<Title style={{opacity: TextOpacity}}>
+					If you want to win  <br /> you can do it all
+				</Title>
 
 
      

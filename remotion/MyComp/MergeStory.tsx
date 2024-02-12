@@ -2,6 +2,7 @@ import { Sequence } from "remotion";
 import { Story2 } from "./Story2";
 import story1 from './assets/story1.jpeg';
 import story3 from './assets/story3.jpeg';
+import { AudioListen } from "./AudioListen";
 
 
 export const MergeStory: React.FC<{
@@ -16,6 +17,9 @@ export const MergeStory: React.FC<{
     </Sequence>
     <Sequence from={150} durationInFrames={150}>
        <Story2 imgUrl={story3}/>
+    </Sequence>
+    <Sequence from={0} durationInFrames={300}>
+       <AudioListen></AudioListen>
     </Sequence>
     </>
     

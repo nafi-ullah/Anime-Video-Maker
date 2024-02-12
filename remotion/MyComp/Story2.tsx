@@ -17,8 +17,8 @@ const Title = styled.div`
   font-family: ---apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 64px;
+  font-weight: 700;
   text-align: center;
   position: absolute;
   top: 300px;
@@ -26,6 +26,13 @@ const Title = styled.div`
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
   padding-left: 50px;
   padding-right: 50px;
+
+
+-webkit-text-stroke-width: 65;
+-webkit-text-stroke-color: #000;
+font-style: normal;
+line-height: normal;
+
 `;
 
 export const Story2: React.FC<{
@@ -50,6 +57,14 @@ export const Story2: React.FC<{
     },
   });
 
+  const TextOpacity = spring({
+		frame: frame - 20,
+		fps,
+		config: {
+			mass: 0.45,  // faster korte chaile mass decrease korte hoy, r slower korte mass baraite hobe
+		},
+	});
+
 
   const coverScale = interpolate(progress, [0, 1], [1, 1.1]);
   const coverScaleOut = interpolate(progress2, [0, 1], [1.1, 2]);
@@ -72,6 +87,10 @@ export const Story2: React.FC<{
     <StoryImg imgsrc={imgUrl}/>
   
 </div>
+
+<Title style={{opacity: TextOpacity}}>
+					If you want to win  <br /> you can do it all
+				</Title>
 
 
      

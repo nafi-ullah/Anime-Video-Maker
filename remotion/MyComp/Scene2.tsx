@@ -30,6 +30,7 @@ const Title = styled.div`
 export const Scene2: React.FC<{
 	ranking: [string, string, string, string, string];
 }> = ({ranking}) => {
+ 
 	const frame = useCurrentFrame();
 	const {width, height, fps} = useVideoConfig();
 	const moveUp = spring({
@@ -55,7 +56,11 @@ export const Scene2: React.FC<{
 			>
 				<Title>Your top genres were</Title>
 				<div style={{height: 290}} />
-				<Bar color="#b2fef5" endWidth={width / 2} rank={1} genre={ranking[0]} />
+				<Bar 
+          color="#b2fef5" 
+          endWidth={width / 2} 
+          rank={1} 
+          genre={ranking[0]} />
 				<Bar
 					color="#d5f772"
 					endWidth={width / 2 - 40}

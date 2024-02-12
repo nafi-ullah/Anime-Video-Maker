@@ -45,7 +45,7 @@ export const Bar: React.FC<Props> = ({endWidth, color, genre, rank}) => {
 		[0, 1]
 	);
 	const animatedWidthProgress = spring({
-		frame: frame - 60 - rank * 3,
+		frame: frame - 60 - rank * 3, // koto nmbr frame er por star hobe , initial frame index.
 		fps,
 		config: {
 			damping: 200,

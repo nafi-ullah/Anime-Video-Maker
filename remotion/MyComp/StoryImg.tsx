@@ -13,10 +13,10 @@ const Cover = styled.div`
 
 
 export const StoryImg: React.FC<{
- 
-}> = () => {
+  imgsrc : string
+}> = ({imgsrc}) => {
 
 
-  return <img src={story1} style={{height: COVER_SIZE }}/>;
+  return <img src={imgsrc} style={{height: COVER_SIZE }}/>;
   //return <Img src={"hackpic.jpeg"} style={{width: COVER_SIZE }}/>; // enable for show image in dev
 };

@@ -7,7 +7,9 @@ import {
 } from "remotion";
 import styled from "styled-components";
 import { StoryImg } from "./StoryImg"; 
+import story1 from './assets/story1.jpeg';
 
+const imageUrl = './assets/story1.jpeg';
 
 
 
@@ -38,7 +40,15 @@ export const Story1: React.FC<{
     fps,
     config: {
       //damping: 200, //  bounce ta bondho kore dibe
-      mass: 1000
+      mass: 500
+    },
+  });
+  const progress2 = spring({
+    frame: frame - 140,
+    fps,
+    config: {
+      //damping: 200, //  bounce ta bondho kore dibe
+      
     },
   });
 
@@ -51,7 +61,8 @@ export const Story1: React.FC<{
 
   // ekhon ami chacchi photo tao animate hok
   const coverOpacity = interpolate(progress, [0.5, 1], [0, 1]);
-  const coverScale = interpolate(progress, [0, 1], [1, 1.5]);
+  const coverScale = interpolate(progress, [0, 1], [1, 1.1]);
+  const coverScaleOut = interpolate(progress2, [0, 1], [1.1, 2]);
 
   //show korar por upore chole jabe:
   const UPSTART = 60;
@@ -79,10 +90,10 @@ export const Story1: React.FC<{
     left: -200, // made the circle center in row
     top: 0, // made the circle center in colomn
     position: "absolute",
-    transform: `scale(${coverScale})`,
+    transform: `scale(${coverScale}) scale(${coverScaleOut}) `,
   }}
 >
-<StoryImg />
+    <StoryImg imgsrc={story1}/>
   
 </div>
 

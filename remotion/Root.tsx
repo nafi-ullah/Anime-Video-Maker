@@ -74,7 +74,7 @@ export const RemotionRoot: React.FC = () => {
         component={Story1}
         width={720}
         height={1280}
-        durationInFrames={210}
+        durationInFrames={150}
         fps={30}
        
       

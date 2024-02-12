@@ -21,15 +21,13 @@ const Title = styled.div`
   font-weight: 700;
   text-align: center;
   position: absolute;
-  top: 300px;
+  top: 700px;
   width: 100%;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
   padding-left: 50px;
   padding-right: 50px;
-
-
--webkit-text-stroke-width: 65;
--webkit-text-stroke-color: #000;
+  -webkit-text-stroke: 4px black; 
+  text-stroke: 4px black; 
 font-style: normal;
 line-height: normal;
 

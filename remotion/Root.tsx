@@ -74,9 +74,9 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="MergeStory"
         component={MergeStory}
-        width={720}
+        width={1200}
         height={1280}
-        durationInFrames={1050}
+        durationInFrames={1200}
         fps={30}
        
       

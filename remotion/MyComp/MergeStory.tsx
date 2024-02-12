@@ -10,8 +10,30 @@ import story5 from './assets/story5.jpeg';
 import story6 from './assets/story6.jpeg';
 import story7 from './assets/story7.jpeg';
 
+
+import mystory1 from './assets/mystory1.jpeg';
+import mystory2 from './assets/mystory2.jpeg';
+import mystory3 from './assets/mystory3.jpeg';
+import mystory4 from './assets/mystory4.jpeg';
+import mystory5 from './assets/mystory5.jpeg';
+import mystory6 from './assets/mystory6.jpeg';
+import mystory7 from './assets/mystory7.jpeg';
+import mystory8 from './assets/mystory8.jpeg';
+
 export const storyImages = [story1, story2, story3, story4, story5, story6, story7];
+export const mystoryImages = [mystory1, mystory2, mystory3, mystory4, mystory5, mystory6, mystory7, mystory8];
 //export const storyImages = ["story1.jpeg", "story2.jpeg", "story3.jpeg", "story4.jpeg", "story5.jpeg", "story6.jpeg", "story7.jpeg"];
+
+export const mystorySentences: string[] = [
+  "A young man basks in joy and laughter with family and friends, painting a picture of bliss in a sunlit town.",
+  "A ghostly figure warns the young man of an impending monster, casting an eerie shadow over his idyllic life.",
+  "Determined to ward off the menace, the young man retreats to relentless study, forsaking the joy that once defined him.",
+  "Peering through his window, the young man watches friends celebrate without him, feeling the sting of isolation.",
+  "The young man's face reflects weariness and determination as he perseveres through relentless study, embodying resilience.",
+  "The young man stands triumphant, showcasing the fruits of his hard work and transformative journey.",
+  "The monstrous threat fades into obscurity as the young man conquers challenges, symbolizing diminishing power.",
+  "Amidst renewed joy, the young man, surrounded by loved ones, reclaims a happy and fulfilling life."
+];
 
 export const storySentences: string[] = [
   "A BAT who fell upon the ground and was caught by a Weasel pleaded to be spared his life.",
@@ -24,6 +46,7 @@ export const storySentences: string[] = [
 ];
 
 export const duration = [0, 150, 300, 450, 600, 750, 900];
+export const myduration = [0, 150, 300, 450, 600, 750, 900, 1050];
 
 
 export const MergeStory: React.FC<{
@@ -33,10 +56,10 @@ export const MergeStory: React.FC<{
 
   return (
     <>
-    {storyImages.map((imgUrl, index) => (
+    {mystoryImages.map((imgUrl, index) => (
 
-      <Sequence from={duration[index]} durationInFrames={150}>
-        <Story2 imgUrl={imgUrl} sentence={storySentences[index]} />
+      <Sequence from={myduration[index]} durationInFrames={150}>
+        <Story2 imgUrl={imgUrl} sentence={mystorySentences[index]} />
 
         </Sequence>
       ))}
@@ -64,7 +87,7 @@ export const MergeStory: React.FC<{
     <Story2 imgUrl={storyImages[6]} sentence={storySentences[6]}/>
     </Sequence> */}
     
-    <Sequence from={0} durationInFrames={1050}>
+    <Sequence from={0} durationInFrames={1200}>
        <AudioListen></AudioListen>
     </Sequence>
     </>
